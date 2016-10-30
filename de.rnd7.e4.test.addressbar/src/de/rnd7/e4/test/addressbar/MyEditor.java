@@ -12,11 +12,13 @@ import org.eclipse.swt.widgets.Text;
 
 public class MyEditor {
 
+	private final Text text;
+
 	@Inject
 	public MyEditor(final Composite parent, final MDirtyable dirtyable) {
-		final Text text = new Text(parent, SWT.BORDER | SWT.MULTI);
-		text.setLayoutData(new GridData(GridData.FILL));
-		text.addModifyListener(e -> {
+		this.text = new Text(parent, SWT.BORDER | SWT.MULTI);
+		this.text.setLayoutData(new GridData(GridData.FILL));
+		this.text.addModifyListener(e -> {
 			dirtyable.setDirty(true);
 		});
 	}
@@ -29,6 +31,10 @@ public class MyEditor {
 	@PreDestroy
 	public void dispose() {
 
+	}
+
+	public void setInput(final String string) {
+		this.text.setText(string);
 	}
 
 }
