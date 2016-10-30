@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            name="de.rnd7.e4.test.addressbar"
+            application="org.eclipse.e4.ui.workbench.swt.E4Application">
+         <property
+               name="applicationCSS"
+               value="platform:/plugin/de.rnd7.e4.test.addressbar/css/default.css">
+         </property>
+         <property
+               name="appName"
+               value="de.rnd7.e4.test.addressbar">
+         </property>
+      </product>
+   </extension>
+
+</plugin>
