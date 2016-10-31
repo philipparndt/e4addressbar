@@ -21,6 +21,9 @@
     </trimBars>
   </children>
   <handlers xmi:id="_KDblYJ3VEeaBup1qo-PrVg" elementId="de.rnd7.eclipse4.test.handler.0" contributionURI="bundleclass://de.rnd7.e4.test.addressbar/de.rnd7.e4.test.addressbar.SaveAction" command="_KhEjoJ3VEeaBup1qo-PrVg"/>
+  <bindingTables xmi:id="_OyKqoJ9wEealfZ6OzoCEiA" elementId="de.rnd7.e4.test.addressbar.bindingtable.0" bindingContext="_c3AF2cjYEeSyMNYR5xypkQ">
+    <bindings xmi:id="_Pb0roJ9wEealfZ6OzoCEiA" elementId="de.rnd7.e4.test.addressbar.keybinding.0" keySequence="M1+S" command="_KhEjoJ3VEeaBup1qo-PrVg"/>
+  </bindingTables>
   <rootContext xmi:id="_c3AF2cjYEeSyMNYR5xypkQ" elementId="org.eclipse.ui.contexts.dialogAndWindow" name="In Dialog and Windows">
     <children xmi:id="_c3AF2sjYEeSyMNYR5xypkQ" elementId="org.eclipse.ui.contexts.window" name="In Windows"/>
     <children xmi:id="_c3AF28jYEeSyMNYR5xypkQ" elementId="org.eclipse.ui.contexts.dialog" name="In Dialogs"/>
