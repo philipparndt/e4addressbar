@@ -7,6 +7,7 @@
         <children xsi:type="basic:Part" xmi:id="_Ou2acJ0LEea2ss9lWCpULA" elementId="de.rnd7.eclipse4.test.part.anotherview" contributionURI="bundleclass://de.rnd7.e4.test.addressbar/de.rnd7.e4.test.addressbar.MyAnotherView" label="Another view"/>
       </children>
       <children xsi:type="basic:PartStack" xmi:id="_OFR5AJ0LEea2ss9lWCpULA" elementId="de.rnd7.eclipse4.test.partstack.editor" containerData="70">
+        <tags>editorStack</tags>
         <tags>NoAutoCollapse</tags>
       </children>
     </children>
@@ -28,7 +29,7 @@
     <children xmi:id="_c3AF2sjYEeSyMNYR5xypkQ" elementId="org.eclipse.ui.contexts.window" name="In Windows"/>
     <children xmi:id="_c3AF28jYEeSyMNYR5xypkQ" elementId="org.eclipse.ui.contexts.dialog" name="In Dialogs"/>
   </rootContext>
-  <descriptors xmi:id="_hcxwsJ6hEeaaGLWlSRx_0Q" elementId="de.rnd7.e4.test.addressbar.partdescriptor.myeditor" allowMultiple="true" closeable="true" contributionURI="bundleclass://de.rnd7.e4.test.addressbar/de.rnd7.e4.test.addressbar.MyEditor"/>
+  <descriptors xmi:id="_hcxwsJ6hEeaaGLWlSRx_0Q" elementId="de.rnd7.e4.test.addressbar.partdescriptor.myeditor" allowMultiple="true" category="editorStack" closeable="true" contributionURI="bundleclass://de.rnd7.e4.test.addressbar/de.rnd7.e4.test.addressbar.MyEditor"/>
   <commands xmi:id="_KhEjoJ3VEeaBup1qo-PrVg" elementId="de.rnd7.eclipse4.test.command.savecommand" commandName="saveCommand"/>
   <addons xmi:id="_c3AF0sjYEeSyMNYR5xypkQ" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
   <addons xmi:id="_c3AF08jYEeSyMNYR5xypkQ" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
