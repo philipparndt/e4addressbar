@@ -10,9 +10,10 @@ import org.eclipse.swt.widgets.Text;
 public class MyToolControl {
 	@Inject
 	public MyToolControl(final Composite parent) {
-		parent.setLayout(new TrimBarGridLayout());
+		final Composite composite = new Composite(parent, SWT.NONE);
+		composite.setLayout(new GridLayout());
+		final Text text = new Text(composite, SWT.BORDER);
 
-		final Text text = new Text(parent, SWT.BORDER);
 		text.setLayoutData(new GridData(GridData.FILL_HORIZONTAL));
 	}
 }
