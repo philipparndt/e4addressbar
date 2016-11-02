@@ -30,16 +30,14 @@ public class MyView {
 		button.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(final SelectionEvent e) {
-
-				final MPart part = partService.showPart("de.rnd7.e4.test.addressbar.partdescriptor.myeditor",
-						PartState.CREATE);
+				final MPart part = partService.createPart("de.rnd7.e4.test.addressbar.partdescriptor.myeditor");
 				part.setLabel("New Dynamic Editor");
+				partService.showPart(part, PartState.ACTIVATE);
 
 				final MyEditor editor = (MyEditor) part.getObject();
 				if (editor != null) {
 					editor.setInput(UUID.randomUUID().toString());
 				}
-
 			}
 		});
 
