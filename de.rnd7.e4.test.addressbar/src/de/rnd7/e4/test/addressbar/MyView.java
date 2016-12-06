@@ -1,14 +1,9 @@
 package de.rnd7.e4.test.addressbar;
 
-import java.util.UUID;
-
 import javax.inject.Inject;
 
-import org.eclipse.e4.ui.model.application.MApplication;
-import org.eclipse.e4.ui.model.application.ui.basic.MPart;
-import org.eclipse.e4.ui.workbench.modeling.EModelService;
-import org.eclipse.e4.ui.workbench.modeling.EPartService;
-import org.eclipse.e4.ui.workbench.modeling.EPartService.PartState;
+import org.eclipse.e4.core.contexts.ContextInjectionFactory;
+import org.eclipse.e4.core.contexts.IEclipseContext;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
@@ -19,8 +14,7 @@ import org.eclipse.swt.widgets.Composite;
 
 public class MyView {
 	@Inject
-	public MyView(final Composite parent, final MApplication application, final EPartService partService,
-			final EModelService modelService) {
+	public MyView(final Composite parent, final IEclipseContext context) {
 
 		parent.setLayout(new GridLayout());
 
@@ -30,16 +24,11 @@ public class MyView {
 		button.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(final SelectionEvent e) {
-				final MPart part = partService.createPart("de.rnd7.e4.test.addressbar.partdescriptor.myeditor");
-				part.setLabel("New Dynamic Editor");
-				partService.showPart(part, PartState.ACTIVATE);
-
-				final MyEditor editor = (MyEditor) part.getObject();
-				if (editor != null) {
-					editor.setInput(UUID.randomUUID().toString());
-				}
+				final TestEditorLauncher launcher = ContextInjectionFactory.make(TestEditorLauncher.class, context);
+				launcher.launchNewEditor();
 			}
 		});
+
 
 	}
 }
